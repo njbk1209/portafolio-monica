@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mónica Kanzler - Portafolio Docente</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        academic: {
+                            light: '#f8fafc',
+                            DEFAULT: '#1e3a8a', // Azul oscuro institucional
+                            dark: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ajuste para que el fixed header no tape el inicio de las secciones al hacer scroll */
+        html {
+            scroll-padding-top: 5rem; 
+        }
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo / Nombre -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#hero" class="text-2xl font-bold text-academic transition hover:text-blue-700">
+                        <i class="fa-solid fa-book-open-reader mr-2"></i>Mónica Kanzler
+                    </a>
+                </div>
+
+                <!-- Enlaces de Escritorio -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#experiencia" class="text-gray-600 hover:text-academic font-semibold transition">Experiencia</a>
+                    <a href="#recursos" class="text-gray-600 hover:text-academic font-semibold transition">Recursos Didácticos</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-academic font-semibold transition">Contacto</a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-academic focus:outline-none p-2 text-2xl">
+                        <i class="fa-solid fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil (Oculto por defecto) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#experiencia" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-academic hover:bg-blue-50 transition">Experiencia</a>
+                <a href="#recursos" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-academic hover:bg-blue-50 transition">Recursos Didácticos</a>
+                <a href="#contacto" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-academic hover:bg-blue-50 transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-br from-academic-dark via-academic to-blue-800 text-white flex-grow flex items-center">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block p-4 rounded-full bg-white/10 mb-6 backdrop-blur-sm">
+                <i class="fa-solid fa-chalkboard-user text-5xl md:text-6xl text-blue-200"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                Mónica Kanzler
+            </h1>
+            <h2 class="text-xl md:text-3xl font-light text-blue-100 mb-8">
+                Profesional de la Educación
+            </h2>
+            <p class="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                Con más de 12 años de trayectoria en la gestión pedagógica y el diseño de programas de aprendizaje integral. Especialista en Educación Primaria e Integral con enfoque en liderazgo docente y estructuración curricular.
+            </p>
+            <div class="mt-10">
+                <a href="#experiencia" class="inline-block bg-white text-academic font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition duration-300 transform hover:-translate-y-1">
+                    Conocer mi trayectoria
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Experiencia -->
+    <section id="experiencia" class="py-20 px-4 bg-academic-light">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Experiencias y Proyectos</h2>
+                <div class="w-24 h-1 bg-academic mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-t-4 border-academic hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-blue-100 text-academic rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Coordinación de Primaria</h3>
+                        <p class="text-sm text-blue-600 font-semibold mb-4">Colegio La Concepción</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Gestión académica y administrativa del nivel educativo, implementación estratégica de proyectos educativos institucionales y seguimiento pedagógico para asegurar la excelencia en el aula.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-t-4 border-academic hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-blue-100 text-academic rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tutoría y Consultoría Pedagógica</h3>
+                        <p class="text-sm text-blue-600 font-semibold mb-4">Práctica Independiente</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Planificación personalizada de metodologías de estudio y diseño de programas de nivelación. Diagnóstico continuo y monitoreo del rendimiento para alcanzar metas de aprendizaje.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-t-4 border-academic hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-blue-100 text-academic rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Docencia de Aula</h3>
+                        <p class="text-sm text-blue-600 font-semibold mb-4">Múltiples Instituciones</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Instrucción en Matemáticas, Ciencias Sociales y Educación Integral en el Colegio Nuestra Señora de Lourdes y Colegio Sagrado Corazón de Jesús. Adaptación curricular orientada al estudiante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Recursos y Materiales -->
+    <section id="recursos" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Recursos+Educativos" alt="Materiales Educativos" class="rounded-2xl shadow-lg w-full object-cover">
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Recursos y Materiales Didácticos</h2>
+                    <div class="w-16 h-1 bg-academic rounded-full mb-8"></div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-pen-ruler text-academic text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Diseño de Materiales Instruccionales</h4>
+                                <p class="text-gray-600 mt-1">Elaboración de guías de estudio estructuradas, marcos metodológicos y recursos visuales adaptados para facilitar la asimilación de conceptos.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-robot text-academic text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Integración de Inteligencia Artificial</h4>
+                                <p class="text-gray-600 mt-1">Uso estratégico de herramientas como ChatGPT para la planificación educativa, optimización de redacción y agilización de procesos curriculares.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-flask text-academic text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-gray-800">Transformación de Contenidos</h4>
+                                <p class="text-gray-600 mt-1">Capacidad para sintetizar información científica compleja (ciencias exactas) convirtiéndola en recursos dinámicos y de fácil comprensión para los alumnos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-20 px-4 bg-academic-dark text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacto Profesional</h2>
+            <p class="text-gray-300 mb-12">Para propuestas institucionales, consultorías o colaboraciones educativas.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                    <i class="fa-solid fa-location-dot text-3xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Ubicación</h4>
+                    <p class="text-gray-300">Caracas, Venezuela</p>
+                </div>
+
+                <div class="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                    <i class="fa-solid fa-phone text-3xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Teléfono</h4>
+                    <a href="tel:+584129678414" class="text-gray-300 hover:text-white transition">(58) 412-967-8414</a>
+                </div>
+
+                <div class="p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                    <i class="fa-solid fa-envelope text-3xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Correo</h4>
+                    <a href="mailto:kanzlermonica1975@gmail.com" class="text-gray-300 hover:text-white break-all transition">kanzlermonica1975@gmail.com</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+        <p>&copy; <span id="year"></span> Mónica Kanzler. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Lógica de interacciones en JS -->
+    <script>
+        // Actualizar año del footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica del menú hamburguesa para móviles
+        const btnMenu = document.getElementById('mobile-menu-button');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Cambiar ícono entre barras y X
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        }
+
+        btnMenu.addEventListener('click', toggleMenu);
+
+        // Cerrar menú móvil al hacer click en un enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Opcional: Cerrar menú si se hace click fuera (en pantallas pequeñas)
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !btnMenu.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+</html>
